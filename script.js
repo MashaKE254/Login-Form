@@ -183,16 +183,13 @@ document.addEventListener('DOMContentLoaded', function() {
         switchToLogin();
     });
 
-    // Add this function to reset the fade classes
     function resetFadeClasses() {
         loginForm.classList.remove('fade-in', 'fade-out');
         registerForm.classList.remove('fade-in', 'fade-out');
     }
 
-    // Call this function when the page loads
     resetFadeClasses();
 
-    // Update height on window resize
     window.addEventListener('resize', function() {
         if (regPasswordGroup.classList.contains('show-requirements')) {
             updateRequirementsHeight();
