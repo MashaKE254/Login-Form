@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="main-container">
+        <h1 class="header">Login</h1>
+        <form action="" class="form login-form">
+            <div class="form-group" style="--i:1;">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="username">Username</label>
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="form-group" style="--i:2;">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <i class='bx bx-hide' id="togglePassword"></i>
+            </div>
+            <input type="submit" value="Login" class="submit-btn">
+            <p>Or</p>
+            <div class="social-logins">
+                <div class="button" style="--i:1;">
+                    <i class='bx bxl-google'></i>
+                    <span>Login with Google</span>
+                </div>
+                <div class="button" style="--i:2;">
+                    <i class='bx bxl-github'></i>
+                    <span>Login with Github</span>
+                </div>
+                <div class="button" style="--i:3;">
+                    <i class='bx bxl-facebook'></i>
+                    <span>Login with Facebook</span>
+                </div>
+            </div>
+        </form>
+        <form action="" class="form register-form" style="display: none;">
+            <div class="form-group" style="--i:1;">
+                <input type="text" id="reg-username" placeholder=" " required>
+                <label for="reg-username">Username</label>
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="form-group" style="--i:2;">
+                <input type="email" id="reg-email" placeholder=" " required>
+                <label for="reg-email">Email</label>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div class="form-group" style="--i:3;">
+                <input type="password" id="reg-password" placeholder=" " required>
+                <label for="reg-password">Password</label>
+                <i class='bx bx-hide' id="toggleRegPassword"></i>
+                <div class="password-requirements">
+                    <div class="requirement" id="length-req"><i class='bx bx-x'></i> 8 characters long</div>
+                    <div class="requirement" id="uppercase-req"><i class='bx bx-x'></i> One uppercase letter</div>
+                    <div class="requirement" id="symbol-req"><i class='bx bx-x'></i> One symbol</div>
+                    <div class="requirement" id="number-req"><i class='bx bx-x'></i> One number</div>
+                </div>
+            </div>
+            <div class="form-group" style="--i:4;">
+                <input type="password" id="reg-confirm-password" placeholder=" " required>
+                <label for="reg-confirm-password">Confirm Password</label>
+                <i class='bx bx-hide' id="toggleRegConfirmPassword"></i>
+            </div>
+            <p id="password-error" style="color: red; display: none;"></p>
+            <input type="submit" value="Sign Up" class="submit-btn">
+        </form>
+        <p class="footer">
+            <span class="login-text">Don't have an account? <a href="#" id="showRegister">Sign up</a></span>
+            <span class="register-text" style="display: none;">Already have an account? <a href="#" id="showLogin">Login</a></span>
+        </p>
+        <div class="success-card" style="display: none;">
+            <i class='bx bx-check-circle'></i>
+            <h2>Success!</h2>
+            <p id="success-message"></p>
+            <button id="success-ok-btn">OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
